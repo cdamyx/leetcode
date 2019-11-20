@@ -12,12 +12,14 @@ var oddCells = function(n, m, indices) {
     
 	//add one to each value in appropriate row
 	for (let i = 0; i < indices.length; i++) {
-		for (let j = 0; j < m; j++)
-		matrix[indices[i][0]][j] += 1;
+		for (let j = 0; j < m; j++) {
+			matrix[indices[i][0]][j] += 1;
+		}
         
-    //add one to each value in appropriate column
-    for (let j = 0; j < n; j++)
-		matrix[j][indices[i][1]] += 1;
+        //add one to each value in appropriate column
+        for (let j = 0; j < n; j++) {
+            matrix[j][indices[i][1]] += 1;
+		}
 	}
   
 	//check whether each value in matrix is odd and increment counter if so
