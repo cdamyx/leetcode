@@ -2,6 +2,25 @@
  * @param {number[][]} grid
  * @return {number}
  */
+ 
+/*Other user's answer
+ transpose = m => m[0].map((x,i) => m.map(x => x[i]))
+
+var maxIncreaseKeepingSkyline = function(grid) {
+    let rowMaxes = grid.map( row => Math.max(...row))
+    let colMaxes = transpose(grid).map( row => Math.max(...row))
+    
+    let increase = 0;
+    for(let i = 0; i < grid.length; i++) {
+        for(let j = 0; j < grid[i].length; j++){
+            let newTotal = Math.min(rowMaxes[i], colMaxes[j])
+            increase += newTotal - grid[i][j];
+        }
+    }
+    return increase
+};
+*/
+  
 var maxIncreaseKeepingSkyline = function(grid) {
 let colMax = [];
 let rowMax = [];
